@@ -1,6 +1,6 @@
 let p1Score = 0;
 let p2Score = 0;
-let round = 0;
+let round = 1;
 
 function targetHTML() {
 
@@ -13,8 +13,15 @@ function targetHTML() {
     const name3 = randomPkmn[3].name;
     
     //Elements by ID
-    const img = document.getElementById('');
+    const img = document.getElementById('shadowImage');
     img.src = imgSrc;
+    img.style.filter = "brightness(0)";
+    
+    const p1ScoreDisplay = document.getElementById('p1r'+`${round}`);
+    p1ScoreDisplay.innerText = p1Score;
+    
+    const p2ScoreDisplay = document.getElementById('p2r'+`${round}`);
+    p2ScoreDisplay.innerText = p2Score;
 
     const html_name_0 = document.getElementById('');
     html_name_0.innerText = name0;
@@ -28,10 +35,6 @@ function targetHTML() {
     const html_name_3 = document.getElementById('');
     html_name_3.innerText = name3;
 
-    const p1ScoreDisplay = document.getElementById('');
-    p1ScoreDisplay.innerText = p1Score;
 
-    const p2ScoreDisplay = document.getElementById('');
-    p2ScoreDisplay.innerText = p2Score;
 
 }
