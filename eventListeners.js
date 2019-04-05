@@ -73,12 +73,14 @@ document.addEventListener('keydown', (key) => {
         if(key.code === 'ArrowUp') {
             start = true;
             gameLoop();
+            targetUnpause();
         }
     }
 
     if(pause) {
         if(key.code === 'ArrowDown') {
             pause = false;
+            
         }
     }
 

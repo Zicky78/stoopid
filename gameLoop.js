@@ -9,6 +9,7 @@ function gameLoop() {
     if(!pause) {
         selectRandomPkmn();
         targetHTML();
+        targetWho();
         canInput = true;
         let timerInterval = setInterval(() => {
             console.log(timer);
@@ -18,6 +19,9 @@ function gameLoop() {
                 checkAnswers();
                 updateBrightness();
                 updateScore();
+                targetPokemon();
+                playCry();
+                targetPause();
                 round++;
                 clearAnserPkmn();
                 clearRandomPkmn();
@@ -25,6 +29,7 @@ function gameLoop() {
                 timer = 7;
                 window.requestAnimationFrame(gameLoop);
             } else {
+                updateTimer();
                 timer--;
             }      
         }, 1000);
@@ -37,15 +42,31 @@ function checkAnswers() {
     
     if(p1Answered) {
         if(p1Answers[0].name === randomPkmn[0].name) {
-            p1Score++;
+            p1ScoreTotal++;
+            p1Score = 'O';
+        } else {
+            p1Score = 'X';
         }
+    } else {
+        p1Score = 'X';
     }
     if(p2Answered){
         if(p2Answers[0].name === randomPkmn[0].name) {
-            p2Score++;
+            p2ScoreTotal++;
+            p2Score='O';
+        } else {
+            p2Score = 'X';
         }
+    } else {
+        p2Score = 'X';
     }
     
     console.log('p1Score: ', p1Score);
     console.log('p2Score', p2Score);
+}
+
+function playCry() {
+    const audio = document.getElementById('audio');
+    audio.src = randomPkmn[0].cry;
+    audio.play();
 }

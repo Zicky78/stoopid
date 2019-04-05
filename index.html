@@ -28,37 +28,37 @@
                         <th>8</th>
                         <th>9</th>
                         <th>10</th>
-                        <th>Total</th>
+                        <th>Total Score</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Player 1</td>
-                        <td id="p1r1">Text</td>
-                        <td id="p1r2">Text</td>
-                        <td id="p1r3">Text</td>
-                        <td id="p1r4">Text</td>
-                        <td id="p1r5">Text</td>
-                        <td id="p1r6">Text</td>
-                        <td id="p1r7">Text</td>
-                        <td id="p1r8">Text</td>
-                        <td id="p1r9">Text</td>
-                        <td id="p1r10">Text</td>
+                        <td id="p1r1"></td>
+                        <td id="p1r2"></td>
+                        <td id="p1r3"></td>
+                        <td id="p1r4"></td>
+                        <td id="p1r5"></td>
+                        <td id="p1r6"></td>
+                        <td id="p1r7"></td>
+                        <td id="p1r8"></td>
+                        <td id="p1r9"></td>
+                        <td id="p1r10"></td>
                         <td id="totalp1"></td>
                     </tr>
                     <tr>
                         <td>Player 2</td>
                         <td id="p2r1"></td>
-                        <td id="p2r2">Text</td>
-                        <td id="p2r3">Text</td>
-                        <td id="p2r4">Text</td>
-                        <td id="p2r5">Text</td>
-                        <td id="p2r6">Text</td>
-                        <td id="p2r7">Text</td>
-                        <td id="p2r8">Text</td>
-                        <td id="p2r9">Text</td>
-                        <td id="p2r10">Text</td>
-                        <td id="totalp2">Text</td>
+                        <td id="p2r2"></td>
+                        <td id="p2r3"></td>
+                        <td id="p2r4"></td>
+                        <td id="p2r5"></td>
+                        <td id="p2r6"></td>
+                        <td id="p2r7"></td>
+                        <td id="p2r8"></td>
+                        <td id="p2r9"></td>
+                        <td id="p2r10"></td>
+                        <td id="totalp2"></td>
                     </tr>
                 </tbody>
             </table>
@@ -68,8 +68,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-7 " id  = "screen">
+                    <h4 id='header'>Press Start to begin...</h4>
                   <img src="assets/img/nintendo_screen1.jpg" style="width: 500px;" id = "nScreen">
-                  <img src="assets/img/absol.png" id="shadowImage" style = "margin-top: -50%; width: 200px;height: 175px">
+                  <img src="images/pokeball.png" id="shadowImage" style = "margin-top: -50%; width: 200px;height: 175px">
+                  <h4 id='command'>Press Start to begin...</h4>
                 </div>
                 <div class="col-md-4 col-lg-5">
                     <div class="table-responsive">
@@ -83,19 +85,19 @@
                             <tbody>
                                 <tr>
                                     <td>a</td>
-                                    <td id="aBtn">Pokemon 1</td>
+                                    <td id="aBtn"></td>
                                 </tr>
                                 <tr>
                                     <td>b</td>
-                                    <td id="bBtn">Pokemon 2</td>
+                                    <td id="bBtn"></td>
                                 </tr>
                                 <tr>
                                     <td>x</td>
-                                    <td id="xBtn">Pokemon 3</td>
+                                    <td id="xBtn"></td>
                                 </tr>
                                 <tr>
                                     <td>y</td>
-                                    <td id="yBtn">Pokemon 4</td>
+                                    <td id="yBtn"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -104,6 +106,12 @@
             </div>
         </div>
     </div>
+    <audio src='' id='audio'></audio>
+    <script src="pokemon.js"></script>
+    <script src="randomize.js"></script>
+    <script src="htmlTargeting.js"></script>
+    <script src="eventListeners.js"></script>
+    <script src="gameLoop.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>

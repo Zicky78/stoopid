@@ -1,25 +1,15 @@
-
-.gameboy-cont{
-
-  text-align:  center;
+.shadowImage{
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 50%;
 }
-.gameboy{
-  top: 300px;
-  width: 600px;
-  height: auto;
-
-}
-.pokemonImg{
-  position:relative;
-  top: 250px;
-  width: 200px;
-
-}
-
-.gameTitle{
-  font-family:'pokemon font';
-  text-align: center;
-}
-table td{
+table, th, td {
   border: 1px solid black;
+}
+#screen{
+
+
+}
+#nScreen{
+  z-index: 3;
 }
