@@ -4,9 +4,11 @@
   text-align:  center;
 }
 .gameboy{
-  top: 300px;
+  text-align: center;
   width: 600px;
   height: auto;
+  position: absolute;
+
 
 }
 .pokemonImg{
@@ -14,13 +16,17 @@
   top: 50px;
   width: 200px;
 
-}
+  text-align: center;
 
+}
+@font-face {
+font-family: "pokemon font";
+src: url("css/fonts/pokemon-solid.ttf")
 
 
 }
 .gameTitle{
-  font-family:'pokemon font';
+
   text-align: center;
 }
 table td{

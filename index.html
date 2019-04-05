@@ -1,68 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href = " css/style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body background = "img/pokemonCurtain.jpg">
-  <div class="gameTitle">
 
-      <img src="https://fontmeme.com/permalink/190405/016bdc96fa330d948b7baf95072d33f0.png" alt="pokemon-font" border="0">
-
-  </div>
-  <div class = "gameboy-cont">
-    <div class = "pokemonContainer">
-      <table style="width:100%">
-  <tr>
-    <th>Round</th>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>3</td>
-    <td>5</td>
-    <td>6</td>
-    <td>7</td>
-    <td>8</td>
-    <td>9</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <th>Player 1</th>
-    <td id = "p1r1"></td>
-    <td id = "p1r2"></td>
-    <td id = "p1r3"></td>
-    <td id = "p1r4"></td>
-    <td id = "p1r5"></td>
-    <td id = "p1r6"></td>
-    <td id = "p1r7"></td>
-    <td id = "p1r8"></td>
-    <td id = "p1r9"></td>
-    <td id = "p1r10"></td>
-  </tr>
-  <tr>
-    <th>Player 2</th>
-    <td id = "p2r1"></td>
-    <td id = "p2r2"></td>
-    <td id = "p2r3"></td>
-    <td id = "p2r4"></td>
-    <td id = "p2r5"></td>
-    <td id = "p2r6"></td>
-    <td id = "p2r7"></td>
-    <td id = "p2r8"></td>
-    <td id = "p2r9"></td>
-    <td id = "p2r10"></td>
-  </tr>
-</table>
-      <img src ="img/ivysaur.png" id = "shadowImage" class = "pokemonImg"></img>
+<body class="text-center">
+    <h1 class="d-xl-flex justify-content-xl-center"><img id="gameTitle" src="https://fontmeme.com/permalink/190405/016bdc96fa330d948b7baf95072d33f0.png"></h1>
+    <div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Rounds</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Player 1</td>
+                        <td id="p1r1">Text</td>
+                        <td id="p1r2">Text</td>
+                        <td id="p1r3">Text</td>
+                        <td id="p1r4">Text</td>
+                        <td id="p1r5">Text</td>
+                        <td id="p1r6">Text</td>
+                        <td id="p1r7">Text</td>
+                        <td id="p1r8">Text</td>
+                        <td id="p1r9">Text</td>
+                        <td id="p1r10">Text</td>
+                        <td id="totalp1"></td>
+                    </tr>
+                    <tr>
+                        <td>Player 2</td>
+                        <td id="p2r1"></td>
+                        <td id="p2r2">Text</td>
+                        <td id="p2r3">Text</td>
+                        <td id="p2r4">Text</td>
+                        <td id="p2r5">Text</td>
+                        <td id="p2r6">Text</td>
+                        <td id="p2r7">Text</td>
+                        <td id="p2r8">Text</td>
+                        <td id="p2r9">Text</td>
+                        <td id="p2r10">Text</td>
+                        <td id="totalp2">Text</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <img src = "img/nintendo_screen1.jpg"  class = "gameboy"></img>
-  </div>
-  <script src="pokemon.js"></script>
-    <script src="randomize.js"></script>
-    <script src="htmlTargeting.js"></script>
-    <script src="eventListeners.js"></script>
-    <script src="gameLoop.js"></script>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-7 relative"><img src="assets/img/nintendo_screen1.jpg" style="width: 500px;"><img src="assets/img/absol.png" id="shadowImage"></div>
+                <div class="col-md-4 col-lg-5">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Button</th>
+                                    <th>Pokemon</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>a</td>
+                                    <td id="aBtn">Pokemon 1</td>
+                                </tr>
+                                <tr>
+                                    <td>b</td>
+                                    <td id="bBtn">Pokemon 2</td>
+                                </tr>
+                                <tr>
+                                    <td>x</td>
+                                    <td id="xBtn">Pokemon 3</td>
+                                </tr>
+                                <tr>
+                                    <td>y</td>
+                                    <td id="yBtn">Pokemon 4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>
