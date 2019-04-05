@@ -1,37 +1,15 @@
-
-.gameboy-cont{
-
-  text-align:  center;
-}
-.gameboy{
-  text-align: center;
-  width: 600px;
-  height: auto;
+.shadowImage{
   position: absolute;
-
-
+  margin-top: 50%;
+  margin-left: 50%;
 }
-.pokemonImg{
-  position:relative;
-  top: 50px;
-  width: 200px;
-
-  text-align: center;
-
-}
-@font-face {
-font-family: "pokemon font";
-src: url("css/fonts/pokemon-solid.ttf")
-
-
-}
-.gameTitle{
-
-  text-align: center;
-}
-table td{
+table, th, td {
   border: 1px solid black;
 }
-.pokemonContainer{
-  height: 100;
+#screen{
+
+
+}
+#nScreen{
+  z-index: 3;
 }
