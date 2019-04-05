@@ -18,9 +18,15 @@ function selectRandomPkmn() {
 }
 
 function selectRandomAnswers() {
+    console.table([randomPkmn[0], randomPkmn[1], randomPkmn[2], randomPkmn[3]]);
     while(answerPkmn.length < 4) {
-        let randomAnswer = randomPkmn[Math.floor(Math.random() * randomPkmn.length)];
-        console.log('RandomAnswer: ', randomAnswer);
+        let randomNum = Math.floor(Math.random() * randomPkmn.length);
+        if(randomNum >= 0 && randomNum <= 3) {
+        randomAnswer = randomPkmn[randomNum];
+        } else {
+            selectRandomAnswers();
+        }
+        console.log('RandomAnswer: ', randomAnswer, 'RandomNum', randomNum);
         if(!answerPkmn.includes(randomAnswer)) {
             answerPkmn.push(randomAnswer);
         }
@@ -32,15 +38,15 @@ function selectRandomAnswers() {
 }
 
 function clearRandomPkmn() {
-    usedPkmn.push(randomPkmn[0]);
     randomPkmn = [];
+    console.log(randomPkmn.length);
 }
 
 function clearUsedPkmn() {
     usedPkmn = [];
 }
 
-function clearAnserPkmn() {
+function clearAnswerPkmn() {
     answerPkmn = [];
 }
 

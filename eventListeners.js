@@ -3,6 +3,10 @@ let start = false;
 let p1Answered = false;
 let p2Answered = false;
 
+const gameboy = document.getElementById('gameboy-sound');
+const gym = document.getElementById('gym');
+const pallete = document.getElementById('pallete');
+
 document.addEventListener('keydown', (key) => {
     if(canInput) {
         if(key.code === 'KeyA') {
@@ -72,16 +76,28 @@ document.addEventListener('keydown', (key) => {
     if(start === false) {
         if(key.code === 'ArrowUp') {
             start = true;
+            pallete.pause();
+            gameboy.play();
             gameLoop();
             targetUnpause();
+            gym.currentTime = 0;
+            gym.play();
         }
     }
 
     if(pause) {
         if(key.code === 'ArrowDown') {
             pause = false;
-            
         }
     }
 
+    if(key.code === 'ArrowLeft') {
+        round = 10;
+    }
+
+    if(key.code === 'ArrowRight') {
+        location.reload();
+    }
+
 });
+

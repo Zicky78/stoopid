@@ -16,6 +16,7 @@ function gameLoop() {
             if(timer === 0) {
                 clearInterval(timerInterval);
                 canInput = false;
+                usedPkmn.push(randomPkmn[0]);
                 checkAnswers();
                 updateBrightness();
                 updateScore();
@@ -23,7 +24,10 @@ function gameLoop() {
                 playCry();
                 targetPause();
                 round++;
-                clearAnserPkmn();
+                if(round === 11) {
+                    checkWin();
+                }
+                clearAnswerPkmn();
                 clearRandomPkmn();
                 pause = true;
                 timer = 7;
@@ -69,4 +73,19 @@ function playCry() {
     const audio = document.getElementById('audio');
     audio.src = randomPkmn[0].cry;
     audio.play();
+}
+
+function checkWin() {
+    if(p1ScoreTotal > p2ScoreTotal) {
+        header.innerText = 'Player 1 Wins!';
+    }
+    if(p1ScoreTotal < p2ScoreTotal) {
+        header.innerText = 'Player 2 Wins!';
+    }
+
+    if(p1ScoreTotal === p2ScoreTotal) {
+        header.innerText = "It's a tie!";
+    }
+
+    command.innerText = 'Press L to restart...';
 }
