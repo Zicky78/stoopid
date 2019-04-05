@@ -14,6 +14,7 @@ function selectRandomPkmn() {
             selectRandomPkmn();
         }
     }
+    console.table([randomPkmn[0], randomPkmn[1], randomPkmn[2], randomPkmn[3]]);
 }
 
 function clearRandomPkmn() {
@@ -24,6 +25,3 @@ function clearUsedPkmn() {
     usedPkmn = [];
 }
 
-selectRandomPkmn();
-
-console.table([randomPkmn[0], randomPkmn[1], randomPkmn[2], randomPkmn[3]]);

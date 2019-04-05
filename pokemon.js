@@ -66,4 +66,3 @@ pkmn.push(new pokemon('mewtwo', 'images/mewtwo.png'));
 pkmn.push(new pokemon('furret', 'images/furret.png'));
 pkmn.push(new pokemon('cradily', 'images/cradily.png'));
 pkmn.push(new pokemon('lucario', 'images/lucario.png'));
-
