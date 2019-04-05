@@ -1,3 +1,5 @@
+let canInput = true;
+
 document.addEventListener('keydown', (key) => {
     if(canInput) {
         if(key.code === 'KeyA') {
